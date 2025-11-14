@@ -1,6 +1,8 @@
-import React from 'react'
 import * as Tabs from '@radix-ui/react-tabs'
 import AccordionExperiment from './components/AccordionExperiment'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './components/accordion'
+
+
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
               className="flex-1 px-6 py-3 text-base text-zinc-400 transition-all duration-200 border-b-2 border-transparent relative top-0.5 hover:text-zinc-300 hover:bg-violet-500/5 data-[state=active]:text-violet-400 data-[state=active]:border-violet-500 data-[state=active]:font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
               value="experiment2"
             >
-              Experiment 2
+              Lovable Accordion
             </Tabs.Trigger>
             <Tabs.Trigger
               className="flex-1 px-6 py-3 text-base text-zinc-400 transition-all duration-200 border-b-2 border-transparent relative top-0.5 hover:text-zinc-300 hover:bg-violet-500/5 data-[state=active]:text-violet-400 data-[state=active]:border-violet-500 data-[state=active]:font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
@@ -50,9 +52,19 @@ function App() {
             value="experiment2"
           >
             <div className="text-center py-12">
-              <h2 className="mb-4 text-2xl text-violet-400">Experiment 2</h2>
-              <p className="text-zinc-400">Add your second experiment here</p>
+              <h2 className="mb-4 text-2xl text-violet-400">Lovable Accordion</h2>
+              <p className="text-zinc-400">Ported from fincat/frontend</p>
             </div>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Is it accessible?</AccordionTrigger>
+                <AccordionContent>Yes. It adheres to WAI-ARIA design patterns.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Does this rock?</AccordionTrigger>
+                <AccordionContent>Yes. It rocks mightily.</AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </Tabs.Content>
 
           <Tabs.Content

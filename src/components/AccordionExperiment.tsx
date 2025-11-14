@@ -1,4 +1,3 @@
-import React from 'react'
 import * as Accordion from '@radix-ui/react-accordion'
 
 function AccordionExperiment() {
@@ -10,7 +9,7 @@ function AccordionExperiment() {
       </p>
 
       <Accordion.Root
-        className="w-full bg-white/5 rounded-lg overflow-hidden"
+        className="w-full bg-white/5 rounded-lg overflow-hidden shadow-xl border border-gray-700"
         type="single"
         collapsible
       >
